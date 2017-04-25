@@ -125,13 +125,12 @@ void ALUSimulator(RegisterFile theRegisterFile, uint32_t OpCode, uint32_t Rs,
 			if (OpCode == 0) {
 				//R type instruction
 				//Set remaining values by bit shifting R type address
-				uint32_t Rs = instruction >> 26;
-				uint32_t Rt = instruction >> 26;
-				uint32_t Rd = instruction >> 26;
-				uint32_t ShiftAmt = instruction >> 26;
-				uint32_t FunctionCode = instruction >> 26;
-				uint32_t ImmediateValue = instruction >> 26;
-				uint32_t * Status = instruction >> 26;
+				uint32_t Rs = (instruction << 6) >> 27;
+				uint32_t Rt = (instruction << 11) >> 27;
+				uint32_t Rd = (instruction << 16) >> 27;
+				uint32_t ShiftAmt = (instruction << 21) >> 27;
+				uint32_t FunctionCode = (instruction 26) >> 26;
+				uint32_t ImmediateValue = 0;
 			} else {
 				//I type instruction
 				////Set remaining values by bit shifting I type address
