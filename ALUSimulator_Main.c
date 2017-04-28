@@ -21,6 +21,7 @@
 
 #include "RegisterFile_01.h"
 #include "ALUSimulator.h"
+#include "MIPSInstructions.h"
 
 //
 //	Define a structure to hold a decoded MIPS instruction.
