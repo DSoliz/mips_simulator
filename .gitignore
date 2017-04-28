@@ -1,2 +1,13 @@
+# Ignore all
+*
+
+# Ignore object file
 *.o
+
+# Ignore directories
 /temp
+
+#Unignore scours files/header files/Data files
+!*.c
+!*.txt
+!*.h
